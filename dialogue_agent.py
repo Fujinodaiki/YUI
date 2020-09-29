@@ -57,7 +57,7 @@ if __name__ == '__main__':
     dialogue_agent = DialogueAgent()
     dialogue_agent.train(training_data['text'], training_data['label']) #読み込んだ学習データのcsvファイルを辞書化している。
 
-    with open(join(BASE_DIR, './replies.csv')) as f:  #返答用のcsvファイルの読み込み
+    with open(join(BASE_DIR, './response.csv')) as f:  #返答用のcsvファイルの読み込み
         replies = f.read().split('\n') #読み込んだ返答用csvファイルを読み込み改行でlist化している。
 
     input_text = '名前を教えてよ'
