@@ -11,6 +11,7 @@ app = Flask(__name__)
 def index():
     name = "フォームで名前を入力してください。"
     number = 0
+    
     return render_template("index.html",name = name,number = number)
 
 @app.route('/',methods=["POST"])
