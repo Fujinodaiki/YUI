@@ -3,7 +3,6 @@ from dialogue_agent import DialogueAgent
 from os.path import dirname, join, normpath
 import MeCab
 import pandas as pd
-import oseti
 
 app = Flask(__name__)
 
@@ -11,7 +10,7 @@ app = Flask(__name__)
 def index():
     name = "フォームで名前を入力してください。"
     number = 0
-    
+
     return render_template("index.html",name = name,number = number)
 
 @app.route('/',methods=["POST"])
