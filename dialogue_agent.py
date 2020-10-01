@@ -33,14 +33,13 @@ class DialogueAgent:
 
     def train(self, texts, labels):
         #語彙の獲得と特徴ベクトル化を一度に行っている。
-        vectorizer = TfidfVectorizer(tokenizer=self._tokenize)
+        vectorizer = TfidfVectorizer(tokenizer=self._tokenize,ngram_range=(1,3))
         bow = vectorizer.fit_transform(texts)  # <1>
         #ここまで
 
         classifier = SVC()
         classifier.fit(bow, labels)
 
-       
         self.vectorizer = vectorizer #辞書生成済みのvectorizer
         self.classifier = classifier #学習済みのclassifier(svc)
 
