@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
-    <link rel="stylesheet" href="/static/css/style.css">
-    <title>yui</title>
-</head>
-<body>
-    <div class="wrapper">
-        <div class="chat-main">
-            <div class="main-header"></div>
-            <div class="messages">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+        <link rel="stylesheet" href="/static/css/style.css">
+        <title>返答するたまご</title>
+    </head>
+    <body>
+        <div class="message">
+          <div class="comments">
+            <div class="comment">
                 <p>{{name}}</p>
-                <p>{{number}}</p>
             </div>
+            <div class="image">
+                  <img src="/static/tamago.png" alt="たまご" width="200" height="200">
+            </div>
+          </div>
+        </div>
+        <div class="forms">
             <div class="form">
-                <form action="/" method="POST">
-                    <input type="text" name="name" placeholder="name">
-                    <input type="hidden" name= "number" value={{number}}>
-                    <input type="submit" value="送信">
-                </form>
+                  <form action="/" method="POST">
+                      <input type="text" name="name" placeholder="何か入力してください" class="a">
+                      <!-- <input type="hidden" name= "number" value={{number}}> -->
+                      <input type="submit" value="送信">
+                  </form>
             </div>
         </div>
-    </div>
-</body>
-</html>
+    </body>
+  </html>
