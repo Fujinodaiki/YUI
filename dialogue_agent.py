@@ -48,26 +48,26 @@ class DialogueAgent:
         return self.classifier.predict(bow)    #出現回数を元にsvcで予測している。
 
 
-if __name__ == '__main__':
-    BASE_DIR = normpath(dirname(__file__))#このスクリプトがあるファイルの絶対パスを取得
+# if __name__ == '__main__':
+#     BASE_DIR = normpath(dirname(__file__))#このスクリプトがあるファイルの絶対パスを取得
 
-    training_data = pd.read_csv(join(BASE_DIR, './training_data.csv'))  #pandasを使用して学習データのcsvファイルを読み込み
+#     training_data = pd.read_csv(join(BASE_DIR, './training_data.csv'))  #pandasを使用して学習データのcsvファイルを読み込み
 
-    dialogue_agent = DialogueAgent()
-    dialogue_agent.train(training_data['text'], training_data['label']) #読み込んだ学習データのcsvファイルを辞書化している。
+#     dialogue_agent = DialogueAgent()
+#     dialogue_agent.train(training_data['text'], training_data['label']) #読み込んだ学習データのcsvファイルを辞書化している。
 
-    with open(join(BASE_DIR, './response.csv')) as f:  #返答用のcsvファイルの読み込み
-        replies = f.read().split('\n') #読み込んだ返答用csvファイルを読み込み改行でlist化している。
+#     with open(join(BASE_DIR, './response.csv')) as f:  #返答用のcsvファイルの読み込み
+#         replies = f.read().split('\n') #読み込んだ返答用csvファイルを読み込み改行でlist化している。
 
-    input_text = '名前を教えてよ'
-    predictions = dialogue_agent.predict([input_text])  # 予測した番号を返答している
-    predicted_class_id = predictions[0]  #predictionsに入っている０番の数字を指定している。（情報は一つしか入っていないため０番固定）
+#     input_text = '名前を教えてよ'
+#     predictions = dialogue_agent.predict([input_text])  # 予測した番号を返答している
+#     predicted_class_id = predictions[0]  #predictionsに入っている０番の数字を指定している。（情報は一つしか入っていないため０番固定）
 
-    print(replies[predicted_class_id]) #返答リストから番号を参照して表示する。
+#     print(replies[predicted_class_id]) #返答リストから番号を参照して表示する。
 
-    while True:
-        input_text = input()
-        predictions = dialogue_agent.predict([input_text])
-        predicted_class_id = predictions[0]
-        print(replies[predicted_class_id])
+#     while True:
+#         input_text = input()
+#         predictions = dialogue_agent.predict([input_text])
+#         predicted_class_id = predictions[0]
+#         print(replies[predicted_class_id])
     
