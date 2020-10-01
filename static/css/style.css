@@ -1,27 +1,63 @@
 
-
-.wrapper{
-  height:100vh;
-  display:flex;
+.message{
+  height:calc(100vh - 90px);
+  width:100%;
+  background-image: url("/static/7210_1.jpg");
+  background-position:center bottom; 
+  background-size:cover;
+}
+.comments{
+  position: absolute;
+  margin-top:40vh;
+  margin-left:60%;
+}
+/* 吹き出し本体 */
+.comment{
+  position: relative;
+  padding: 20px;
+  background-color: #ade0ff;
+  border-radius: 30px;
+}
+/* 大きい丸 */
+.comment::before{
+  content: '';
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  background-color: #ade0ff;
+  left: -35px;
+  bottom: -20px;
+  width: 30px;
+  height: 30px;
+}
+/* 小さい丸 */
+.comment::after{
+  content: '';
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  background-color: #ade0ff;
+  left: -60px;
+  bottom: -40px;
+  width: 15px;
+  height: 15px;
+}
+.image{
+  position:absolute;
+  left:-270px;
+  bottom:-175px;
 }
 
-
-.chat-main{
-  background-color:#1a1d21;
-  width: 100%;
-}
-
-.main-header{
-  background-color:#3f3f3f;
-  border-bottom:1px solid #595959;
-  height:100px;
-}
-
-.messages{
-  background-color:#ffc0cb;
-  height:calc(100vh - 190px);
-}
-.form{
+.forms{
   background-color:#595959;
   height:90px;
+  width:100%;
+}
+.form{
+  position: absolute;
+  margin-left: 70%;
+  width:30%;
+}
+.a{
+  width:80%;
 }
