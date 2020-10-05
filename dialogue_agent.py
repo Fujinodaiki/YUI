@@ -1,4 +1,6 @@
 from os.path import dirname, join, normpath
+import unicodedata
+import neologdn
 import MeCab
 import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer,TfidfVectorizer
@@ -12,6 +14,8 @@ class DialogueAgent:
         self.tagger = MeCab.Tagger()
 
     def _tokenize(self, text):
+        text = unicodedata.normalize('NFKC',text) #unicode正規化
+        text = neologdn.normalize(text) #文字列の正規化
         node = self.tagger.parseToNode(text)
         result = []
         while node:
