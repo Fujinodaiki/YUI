@@ -34,6 +34,6 @@ def post():
     return render_template("index.html",name = name,number = number)
     #ここまで
    
-# if __name__ == "__main__":
-#     # webサーバー立ち上げ
-#     app.run()
+if __name__ == "__main__":
+    # webサーバー立ち上げ
+    app.run()
