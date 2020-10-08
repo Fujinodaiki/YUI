@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    name = "フォームで名前を入力してください。"
+    name = "誰か来たようですね。"
     number = 0
 
     return render_template("index.html",name = name,number = number)
