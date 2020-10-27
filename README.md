@@ -54,4 +54,8 @@
 新しくpythonという言語や自然言語処理、機械学習というものに触れてみて、様々な可能性を垣間見ることができました。   
 今後もこの分野の学習は継続して行い、また興味を持ったところにはとりあえず一歩踏みだすということを意識してプログラムを学んでいきたいと思います。
 
+#画像使用
+たまご：サイト名：illust AC  url:https://www.ac-illust.com/main/detail.php?id=1037969&word=%E3%82%BF%E3%83%9E%E3%82%B4&searchId=78992954#comment-section  素材名：タマゴ  
+作者：作者: K-factory様  
+背景：  サイト名：Sozai good  url:https://sozai-good.com/illust/free-background/landscape-nature/7210  素材名：草原 木 山 無料背景イラスト
 
